@@ -25,3 +25,4 @@ steps:
       args: '--property,qodana.net.solution=SimpleClassLibrary.sln,--property,idea.config.path=.qodana\config\idea,--log-level,debug'
     env:
       QODANA_TOKEN: $(QODANA_TOKEN)
+      QODANA_CONF: ".qodana/config/idea"
