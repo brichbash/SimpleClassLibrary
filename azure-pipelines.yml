@@ -22,6 +22,6 @@ steps:
     inputs:
       uploadResult: true
       cacheDir: '.qodana/cache'
-      args: '--property,qodana.net.solution=SimpleClassLibrary.sln,--property,idea.config.path=.qodana/config/idea,--log-level,debug'
+      args: '--property,qodana.net.solution=SimpleClassLibrary.sln,--property,idea.config.path=.qodana\config\idea,--log-level,debug'
     env:
       QODANA_TOKEN: $(QODANA_TOKEN)
