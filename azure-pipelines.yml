@@ -14,14 +14,14 @@ steps:
   - task: Cache@2
     inputs:
       key: '"$(Build.Repository.Name)" | "$(Build.SourceBranchName)" | "$(Build.SourceVersion)"'
-      path: '.qodana/cache'
+      path: '.qodana\cache'
       restoreKeys: |
         "$(Build.Repository.Name)" | "$(Build.SourceBranchName)"
         "$(Build.Repository.Name)"
   - task: QodanaScan@2025
     inputs:
       uploadResult: true
-      cacheDir: '.qodana/cache'
+      cacheDir: '.qodana\cache'
       args: '--property,qodana.net.solution=SimpleClassLibrary.sln,--property,idea.config.path=.qodana\config\idea,--log-level,debug'
     env:
       QODANA_TOKEN: $(QODANA_TOKEN)
